@@ -7,9 +7,10 @@
 
 import SwiftUI
 import RiveRuntime
-
+ 
 struct OnboardingView: View {
     @State var showModal: Bool = false
+    @Binding var show: Bool
      
     let button =  RiveViewModel(fileName: "button")
     
@@ -37,7 +38,7 @@ struct OnboardingView: View {
                         } label:  {
                             Image(systemName: "xmark")
                                 .frame(width: 36, height: 36)
-                                 .foregroundColor(.black)
+                                .foregroundColor(.black)
                                 .background(Color.white)
                                 .mask(Circle())
                                 .shadow(color: Color("Shadow"),
@@ -49,7 +50,25 @@ struct OnboardingView: View {
                     }
                     .zIndex(1)
             }
-              
+            Button {
+                withAnimation {
+                    show = false
+                }
+            } label: {
+                Image(systemName: "xmark")
+                    .frame(width: 36, height: 36 )
+                    .background(Color.black)
+                    .foregroundStyle(.white)
+                    .mask(Circle())
+                    .shadow(color: Color("Shadow").opacity(0.3),
+                            radius: 10,
+                            x:0,
+                            y:10)
+                
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
+            .padding(20)
+            .offset(y: showModal ? -200 : 80)
         }
     }
     
@@ -111,12 +130,12 @@ struct OnboardingView: View {
             
         }
         .padding(40)
-        .padding(.top, 40)
+        .padding(.top, 40)  
     }
 }
 
 #Preview {
-    OnboardingView()
+    OnboardingView(show: .constant(true))
 }
  
  

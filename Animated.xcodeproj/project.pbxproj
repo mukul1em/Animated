@@ -6,13 +6,30 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		EC3131FD2D2B33A300276DE2 /* RiveRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = EC3131FC2D2B33A300276DE2 /* RiveRuntime */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		EC3131DB2D2B328A00276DE2 /* Animated.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Animated.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		EC31320A2D2B438C00276DE2 /* Exceptions for "Animated" folder in "Animated" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = EC3131DA2D2B328A00276DE2 /* Animated */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		EC3131DD2D2B328A00276DE2 /* Animated */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				EC31320A2D2B438C00276DE2 /* Exceptions for "Animated" folder in "Animated" target */,
+			);
 			path = Animated;
 			sourceTree = "<group>";
 		};
@@ -23,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC3131FD2D2B33A300276DE2 /* RiveRuntime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +83,7 @@
 			);
 			name = Animated;
 			packageProductDependencies = (
+				EC3131FC2D2B33A300276DE2 /* RiveRuntime */,
 			);
 			productName = Animated;
 			productReference = EC3131DB2D2B328A00276DE2 /* Animated.app */;
@@ -94,6 +113,9 @@
 			);
 			mainGroup = EC3131D22D2B328A00276DE2;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				EC3131FB2D2B33A300276DE2 /* XCRemoteSwiftPackageReference "rive-ios" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = EC3131DC2D2B328A00276DE2 /* Products */;
 			projectDirPath = "";
@@ -255,6 +277,8 @@
 				DEVELOPMENT_TEAM = A4L3THSK8J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Animated/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -284,6 +308,8 @@
 				DEVELOPMENT_TEAM = A4L3THSK8J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Animated/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -324,6 +350,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EC3131FB2D2B33A300276DE2 /* XCRemoteSwiftPackageReference "rive-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rive-app/rive-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EC3131FC2D2B33A300276DE2 /* RiveRuntime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC3131FB2D2B33A300276DE2 /* XCRemoteSwiftPackageReference "rive-ios" */;
+			productName = RiveRuntime;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EC3131D32D2B328A00276DE2 /* Project object */;
 }
